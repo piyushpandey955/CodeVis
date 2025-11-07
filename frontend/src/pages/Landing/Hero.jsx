@@ -2,8 +2,10 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Code, Cpu, Zap } from 'lucide-react';
 import Scene3D from '../../components/three/Scene3D';
+import Typewriter from '../../components/ui/Typewriter';
 
 const Feature = ({ icon, title, children }) => (
+// ...existing code...
   <div className="flex items-start gap-4">
     <div className="mt-1 bg-white/10 p-2 rounded-lg">{icon}</div>
     <div>
@@ -44,9 +46,11 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight tracking-tighter">
-              The Future of
+              <Typewriter text="The Future of" speed={0.03} />
               <br />
-              <span className="text-purple-400">Algorithm</span> Visualization
+              <span className="text-purple-400">
+                <Typewriter text="Algorithm Visualization" delay={0.8} speed={0.04} />
+              </span>
             </h1>
             <p className="text-lg md:text-xl mb-10 text-white/80 max-w-xl mx-auto md:mx-0">
               An interactive, immersive, and intelligent platform to master data structures and algorithms. Stop memorizing, start understanding.
@@ -72,9 +76,9 @@ export default function Hero() {
 
         {/* Right Column: Features */}
         <motion.div 
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
           className="space-y-8 bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl"
         >
           <Feature icon={<Zap className="text-yellow-300" />} title="Interactive 3D Visualizations">

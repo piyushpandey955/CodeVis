@@ -1,6 +1,6 @@
+import { Route, Routes } from 'react-router-dom';
 import Header from './components/layout/Header';
-import Features from './pages/Landing/Features';
-import Hero from './pages/Landing/Hero';
+import Landing from './pages/Landing/Landing';
 import './App.css';
 
 function App() {
@@ -8,8 +8,10 @@ function App() {
     <>
       <Header />
       <main>
-        <Hero />
-        <Features />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          {/* Add other routes here */}
+        </Routes>
       </main>
     </>
   );

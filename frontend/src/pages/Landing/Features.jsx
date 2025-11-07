@@ -5,13 +5,13 @@ import { Canvas } from '@react-three/fiber';
 import FloatingData from '../../components/three/FloatingData';
 
 const featureVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, x: -100 },
   visible: (i) => ({
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
       delay: i * 0.2,
-      duration: 0.8,
+      duration: 1,
       ease: 'easeOut',
     },
   }),
