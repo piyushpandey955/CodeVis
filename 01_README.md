@@ -1,4 +1,4 @@
-# CodeVis - Interactive DSA Visualization Platform
+# CodeAtlas - Interactive DSA Visualization Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
@@ -8,7 +8,7 @@
 
 ## 🌟 Overview
 
-CodeVis is a next-generation learning platform that makes Data Structures and Algorithms tangible through:
+CodeAtlas is a next-generation learning platform that makes Data Structures and Algorithms tangible through:
 - **Interactive 3D Visualizations** - See data structures come to life
 - **Real-time Operations** - Manipulate data structures instantly
 - **Multi-language Code Examples** - Python, Java, C++, JavaScript
@@ -51,8 +51,8 @@ CodeVis is a next-generation learning platform that makes Data Structures and Al
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/codevis.git
-cd codevis/frontend
+git clone https://github.com/yourusername/codeatlas.git
+cd codeatlas/frontend
 
 # Install dependencies
 npm install
@@ -81,7 +81,7 @@ netlify deploy
 ## 📁 Project Structure
 
 ```
-CodeVis/
+CodeAtlas/
 ├── frontend/              # React + Vite (ONLY THIS!)
 │   ├── public/
 │   │   ├── code-examples/ # JSON files with code
@@ -182,7 +182,7 @@ This project is licensed under the MIT License - see [LICENSE](./LICENSE) file f
 
 ## 💼 Business & Partnerships
 
-CodeVis is designed as a commercial product for:
+CodeAtlas is designed as a commercial product for:
 - **EdTech Companies** - White-label solutions
 - **Universities** - Campus-wide licenses
 - **Bootcamps** - Interactive curriculum
@@ -198,10 +198,10 @@ For partnership inquiries: [your-email@example.com]
 
 ## 📞 Support
 
-- 📧 Email: support@codevis.dev
-- 💬 Discord: [Join our community](https://discord.gg/codevis)
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/codevis/issues)
-- 📚 Docs: [docs.codevis.dev](https://docs.codevis.dev)
+- 📧 Email: support@codeatlas.dev
+- 💬 Discord: [Join our community](https://discord.gg/codeatlas)
+- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/codeatlas/issues)
+- 📚 Docs: [docs.codeatlas.dev](https://docs.codeatlas.dev)
 
 ---
 

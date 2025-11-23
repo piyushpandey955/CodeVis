@@ -1,10 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-import { Code } from 'lucide-react';
+import { Code, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
-const NavLink = ({ children, direction = 'left' }) => (
+const NavLink = ({ children, direction = 'left', href = '#' }) => (
   <motion.a 
-    href="#" 
+    href={href} 
     whileHover={{ x: direction === 'left' ? -5 : 5, scale: 1.05 }}
     transition={{ duration: 0.3 }}
     className="text-white/80 hover:text-white transition-colors duration-300"
@@ -12,6 +14,66 @@ const NavLink = ({ children, direction = 'left' }) => (
     {children}
   </motion.a>
 );
+
+const VisualizersDropdown = ({ direction = 'left' }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const visualizers = [
+    { name: 'Array', path: '/visualizers/array' },
+    { name: '2D Array', path: '/visualizers/2d-array' },
+    { name: 'Stack', path: '/visualizers/stack' },
+    { name: 'Queue', path: '/visualizers/queue' },
+    { name: 'Linked List', path: '/visualizers/linked-list' },
+  ];
+
+  return (
+    <div 
+      className="relative"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      <motion.button
+        whileHover={{ x: direction === 'left' ? -5 : 5, scale: 1.05 }}
+        transition={{ duration: 0.3 }}
+        className="flex items-center gap-1 text-white/80 hover:text-white transition-colors duration-300"
+      >
+        Visualizers
+        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+      </motion.button>
+
+      {/* Dropdown Menu */}
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.2 }}
+          className="absolute top-full mt-2 left-0 w-48 bg-gray-900/95 backdrop-blur-lg border border-white/10 rounded-xl shadow-xl overflow-hidden"
+        >
+          {visualizers.map((viz, index) => (
+            viz.disabled ? (
+              <div
+                key={index}
+                className="px-4 py-3 text-gray-500 cursor-not-allowed flex items-center justify-between"
+              >
+                <span>{viz.name}</span>
+                <span className="text-xs text-gray-600">Soon</span>
+              </div>
+            ) : (
+              <Link
+                key={index}
+                to={viz.path}
+                className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/5 transition-colors duration-200 cursor-pointer"
+              >
+                {viz.name}
+              </Link>
+            )
+          ))}
+        </motion.div>
+      )}
+    </div>
+  );
+};
 
 export default function Header() {
   return (
@@ -23,21 +85,23 @@ export default function Header() {
     >
       <nav className="flex items-center justify-between p-4 bg-white/5 backdrop-blur-lg border border-white/10 rounded-full shadow-lg">
         {/* Logo */}
-        <motion.div 
-          className="flex items-center gap-2"
-          whileHover={{ x: -5, scale: 1.05 }}
-          transition={{ duration: 0.3 }}
-        >
-          <Code className="w-7 h-7 text-purple-400" />
-          <span className="text-xl font-bold text-white">CodeVis</span>
-        </motion.div>
+        <Link to="/">
+          <motion.div 
+            className="flex items-center gap-2 cursor-pointer"
+            whileHover={{ x: -5, scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Code className="w-7 h-7 text-purple-400" />
+            <span className="text-xl font-bold text-white">CodeAtlas</span>
+          </motion.div>
+        </Link>
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center gap-8">
-          <NavLink direction="left">Visualizers</NavLink>
-          <NavLink direction="left">Features</NavLink>
-          <NavLink direction="right">Pricing</NavLink>
-          <NavLink direction="right">Docs</NavLink>
+          <VisualizersDropdown direction="left" />
+          <NavLink direction="left" href="#features">Features</NavLink>
+          <NavLink direction="right" href="#pricing">Pricing</NavLink>
+          <NavLink direction="right" href="#docs">Docs</NavLink>
         </div>
 
         {/* CTA Button */}

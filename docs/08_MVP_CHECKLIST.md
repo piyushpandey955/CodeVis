@@ -1,4 +1,4 @@
-# CodeVis MVP Checklist
+# CodeAtlas MVP Checklist
 
 ## 🎯 MVP Goal
 Build a beautiful, functional DSA visualization platform with:

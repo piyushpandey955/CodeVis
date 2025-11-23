@@ -1,11 +1,11 @@
-# CodeVis - Architecture Quick Reference
+# CodeAtlas - Architecture Quick Reference
 
 > 🚀 **TL;DR**: A frontend-only DSA visualization platform built with React, designed as a commercial product for EdTech market. **No backend needed for MVP!**
 
 ---
 
 ## 🎯 One-Sentence Pitch
-"CodeVis transforms abstract Data Structures & Algorithms into interactive 3D experiences, helping students master concepts 3x faster through visual learning."
+"CodeAtlas transforms abstract Data Structures & Algorithms into interactive 3D experiences, helping students master concepts 3x faster through visual learning."
 
 ---
 
@@ -48,7 +48,7 @@
 ## 📁 Project Structure (Simplified)
 
 ```
-CodeVis/
+CodeAtlas/
 ├── frontend/                  # React app (ONLY THIS!)
 │   ├── public/
 │   │   ├── code-examples/    # JSON files with code
@@ -227,7 +227,7 @@ Testing & Deployment (1 week)
 
 ## 🏆 Competitive Advantages
 
-| Competitor | CodeVis Advantage |
+| Competitor | CodeAtlas Advantage |
 |------------|-------------------|
 | VisuAlgo | Modern 3D UI, better animations |
 | Algorithm Visualizer | Code upload feature, multi-language |

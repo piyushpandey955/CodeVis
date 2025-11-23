@@ -75,7 +75,7 @@ export default function Features() {
             Everything You Need to <span className="text-purple-400">Truly Understand</span>
           </h2>
           <p className="text-lg md:text-xl text-white/80 mt-4 max-w-3xl mx-auto">
-            CodeVis is more than just a visualizer; it's a complete learning ecosystem.
+            CodeAtlas is more than just a visualizer; it's a complete learning ecosystem.
           </p>
         </motion.div>
 

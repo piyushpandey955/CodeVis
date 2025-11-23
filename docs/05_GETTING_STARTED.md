@@ -1,8 +1,8 @@
-# Getting Started with CodeVis Development# Getting Started with CodeVis Development
+# Getting Started with CodeAtlas Development# Getting Started with CodeAtlas Development
 
 
 
-Welcome! This guide will help you set up your development environment and start building CodeVis.Welcome! This guide will help you set up your development environment and start building CodeVis.
+Welcome! This guide will help you set up your development environment and start building CodeAtlas.Welcome! This guide will help you set up your development environment and start building CodeAtlas.
 
 
 
@@ -44,15 +44,11 @@ Before you begin, ensure you have the following installed:Before you begin, ensu
 
 
 
-```bash```bash
+```bash
+# Navigate to your project directory
+cd "/Users/piyush/Documents/project jarves/web devlopment/CodeAtlas"
 
-# Navigate to your project directory# Navigate to your project directory
-
-cd "/Users/piyush/Documents/project jarves/web devlopment/CodeVis"cd "/Users/piyush/Documents/project jarves/web devlopment/CodeVis"
-
-
-
-# Initialize git (if not already)# Initialize git (if not already)
+# Initialize git (if not already)
 
 git initgit init
 
@@ -64,7 +60,7 @@ git commit -m "Initial commit with architecture docs"git commit -m "Initial comm
 
 # Create GitHub repository and push# Create GitHub repository and push
 
-gh repo create CodeVis --public --source=. --remote=origingh repo create CodeVis --public --source=. --remote=origin
+gh repo create CodeAtlas --public --source=. --remote=origingh repo create CodeAtlas --public --source=. --remote=origin
 
 git push -u origin maingit push -u origin main
 
@@ -482,9 +478,9 @@ export default function Hero() {mkdir -p tests/{unit,integration,e2e}
 
           transition={{ delay: 0.2, type: "spring" }}app = FastAPI(
 
-        >    title="CodeVis API",
+        >    title="CodeAtlas API",
 
-          Welcome to CodeVis    description="Interactive DSA Visualization Platform",
+          Welcome to CodeAtlas    description="Interactive DSA Visualization Platform",
 
         </motion.h1>    version="1.0.0",
 
@@ -526,7 +522,7 @@ export default function Hero() {mkdir -p tests/{unit,integration,e2e}
 
       </div>    return {
 
-    </motion.div>        "message": "Welcome to CodeVis API",
+    </motion.div>        "message": "Welcome to CodeAtlas API",
 
   );        "version": "1.0.0",
 
@@ -568,7 +564,7 @@ class Settings(BaseSettings):
 
 ---    # App
 
-    APP_NAME: str = "CodeVis"
+    APP_NAME: str = "CodeAtlas"
 
 ## Step 5: Create Code Examples Structure    DEBUG: bool = True
 
@@ -576,7 +572,7 @@ class Settings(BaseSettings):
 
 Create sample code examples for DSA topics:    # Database
 
-    DATABASE_URL: str = "postgresql://localhost/codevis"
+    DATABASE_URL: str = "postgresql://localhost/codeatlas"
 
 ```bash    
 
@@ -626,11 +622,11 @@ Create `insert.json`:    # Security
 
     },cat > .env << 'EOF'
 
-    "java": {APP_NAME=CodeVis
+    "java": {APP_NAME=CodeAtlas
 
       "code": "public static ArrayList<Integer> insert(ArrayList<Integer> arr, int index, int value) {\n    arr.add(index, value);\n    return arr;\n}\n\n// Example\nArrayList<Integer> arr = new ArrayList<>(Arrays.asList(1, 2, 3, 4));\ninsert(arr, 2, 99);\nSystem.out.println(arr);  // [1, 2, 99, 3, 4]",DEBUG=True
 
-      "complexity": {DATABASE_URL=postgresql://localhost/codevis
+      "complexity": {DATABASE_URL=postgresql://localhost/codeatlas
 
         "time": "O(n)",REDIS_URL=redis://localhost:6379/0
 
@@ -656,7 +652,7 @@ Create `insert.json`:    # Security
 
   }# Create PostgreSQL database
 
-}createdb codevis
+}createdb codeatlas
 
 ```
 
@@ -664,7 +660,7 @@ Create `insert.json`:    # Security
 
 ---# psql postgres
 
-# CREATE DATABASE codevis;
+# CREATE DATABASE codeatlas;
 
 ## Step 6: Setup LocalStorage Helper# \q
 
@@ -680,7 +676,7 @@ Create `src/lib/utils/localStorage.js`:alembic init alembic
 
 // Save data to localStorage# Edit alembic.ini - Update sqlalchemy.url
 
-export const saveToLocalStorage = (key, value) => {# sqlalchemy.url = postgresql://localhost/codevis
+export const saveToLocalStorage = (key, value) => {# sqlalchemy.url = postgresql://localhost/codeatlas
 
   try {```
 
@@ -768,7 +764,7 @@ export const clearLocalStorage = () => {  backend:
 
 };    environment:
 
-```      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/codevis
+```      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/codeatlas
 
       - REDIS_URL=redis://redis:6379/0
 
@@ -790,7 +786,7 @@ Create `src/features/dsa/store/stackStore.js`:    environment:
 
 import { create } from 'zustand';      - POSTGRES_PASSWORD=postgres
 
-      - POSTGRES_DB=codevis
+      - POSTGRES_DB=codeatlas
 
 export const useStackStore = create((set) => ({    ports:
 
@@ -930,7 +926,7 @@ dist/## Step 7: Verify Setup
 
 *.swp```bash
 
-*.swopsql codevis
+*.swopsql codeatlas
 
 \dt  # List tables
 
@@ -1002,7 +998,7 @@ npm install -g vercel          animate={{ y: 0 }}
 
 # Deploy from frontend directory        >
 
-cd frontend          Welcome to CodeVis
+cd frontend          Welcome to CodeAtlas
 
 vercel        </motion.h1>
 
@@ -1016,7 +1012,7 @@ vercel        </motion.h1>
 
 # - Link to existing project? No          transition={{ delay: 0.4, type: "spring" }}
 
-# - Project name? codevis        >
+# - Project name? codeatlas        >
 
 # - Directory? ./          Visualize Data Structures & Algorithms Like Never Before
 

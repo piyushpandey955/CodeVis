@@ -2,7 +2,7 @@
 
 ## 🤔 The Question
 
-**Do I need a backend for CodeVis MVP?**
+**Do I need a backend for CodeAtlas MVP?**
 
 **Short Answer**: **NO!** ❌
 
@@ -402,7 +402,7 @@ Ask yourself:
 
 ## 🎉 Conclusion
 
-For CodeVis MVP, **you absolutely don't need a backend**.
+For CodeAtlas MVP, **you absolutely don't need a backend**.
 
 **Why?**
 - DSA visualizations run perfectly in browser

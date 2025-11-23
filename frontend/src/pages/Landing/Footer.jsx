@@ -7,7 +7,7 @@ import FloatingGraph from '../../components/three/FloatingGraph';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <FaGithub />, url: 'https://github.com/piyushpandey955/CodeVis' },
+    { icon: <FaGithub />, url: 'https://github.com/piyushpandey955/CodeAtlas' },
     { icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/piyushpandey955/' },
     { icon: <FaTwitter />, url: 'https://twitter.com/piyushpandey955' },
   ];
@@ -43,7 +43,7 @@ const Footer = () => {
             ))}
           </div>
           <div className="border-t border-white/20 w-full my-6"></div>
-          <p className="text-gray-400">&copy; {new Date().getFullYear()} CodeVis. All rights reserved.</p>
+          <p className="text-gray-400">&copy; {new Date().getFullYear()} CodeAtlas. All rights reserved.</p>
         </motion.div>
       </div>
     </SectionWrapper>

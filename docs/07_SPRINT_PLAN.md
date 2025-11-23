@@ -1,4 +1,4 @@
-# CodeVis - Sprint-Based Development Plan
+# CodeAtlas - Sprint-Based Development Plan
 
 ## 🎯 Overview
 
@@ -127,7 +127,7 @@ npm install zustand react-router-dom lucide-react
 **Design:**
 ```
 ┌─────────────────────────────────────────┐
-│          Why Choose CodeVis?            │
+│          Why Choose CodeAtlas?            │
 │                                         │
 │  [Card 1]    [Card 2]    [Card 3]      │
 │  Interactive  Multi-Lang  Real-Time     │
@@ -1085,7 +1085,7 @@ Polish the app, add finishing touches, and prepare for launch.
 **Marketing Materials:**
 1. **Demo Video** (2 min):
    - Problem (learning DSA is hard)
-   - Solution (CodeVis)
+   - Solution (CodeAtlas)
    - Demo (stack visualization)
    - Demo (paste code feature)
    - CTA (Try it free)

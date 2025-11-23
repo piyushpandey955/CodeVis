@@ -81,7 +81,7 @@ React 18 + Vite 5
 ## 📁 Simplified Project Structure
 
 ```
-CodeVis/
+CodeAtlas/
 ├── public/
 │   ├── code-examples/           # Static JSON files
 │   │   ├── array/
@@ -241,11 +241,11 @@ CodeVis/
 // lib/storage/localStorage.js
 
 export const savePreferences = (prefs) => {
-  localStorage.setItem('codevis_preferences', JSON.stringify(prefs));
+  localStorage.setItem('codeatlas_preferences', JSON.stringify(prefs));
 };
 
 export const loadPreferences = () => {
-  const saved = localStorage.getItem('codevis_preferences');
+  const saved = localStorage.getItem('codeatlas_preferences');
   return saved ? JSON.parse(saved) : {
     theme: 'light',
     animationSpeed: 1,
@@ -258,11 +258,11 @@ export const saveHistory = (visualization) => {
   history.unshift(visualization);
   // Keep last 10
   const trimmed = history.slice(0, 10);
-  localStorage.setItem('codevis_history', JSON.stringify(trimmed));
+  localStorage.setItem('codeatlas_history', JSON.stringify(trimmed));
 };
 
 export const loadHistory = () => {
-  const saved = localStorage.getItem('codevis_history');
+  const saved = localStorage.getItem('codeatlas_history');
   return saved ? JSON.parse(saved) : [];
 };
 ```
@@ -380,7 +380,7 @@ function CodePanel({ topic, language }) {
 npm i -g vercel
 
 # 2. Deploy
-cd CodeVis/frontend
+cd CodeAtlas/frontend
 vercel
 
 # Done! Live in 2 minutes
@@ -547,8 +547,8 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'CodeVis - DSA Visualizer',
-        short_name: 'CodeVis',
+        name: 'CodeAtlas - DSA Visualizer',
+        short_name: 'CodeAtlas',
         description: 'Interactive DSA Visualization Platform',
         theme_color: '#3B82F6',
         icons: [

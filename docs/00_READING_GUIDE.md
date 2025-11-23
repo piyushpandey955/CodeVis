@@ -1,4 +1,4 @@
-# 📚 CodeVis Documentation Reading Guide
+# 📚 CodeAtlas Documentation Reading Guide
 
 ## ✅ Cleanup Complete!
 
@@ -18,7 +18,7 @@
 ### **Step 1: Start Here** ⭐
 📄 **[01_README.md](../01_README.md)** (5 min read)
 - Project overview
-- What is CodeVis?
+- What is CodeAtlas?
 - Key features
 - Quick installation
 
@@ -147,7 +147,7 @@ If you want to start coding ASAP:
 ## 🗂️ Project Structure
 
 ```
-CodeVis/
+CodeAtlas/
 ├── 01_README.md                              ← Start here
 ├── 02_QUICKSTART.md                          ← Quick overview
 └── docs/

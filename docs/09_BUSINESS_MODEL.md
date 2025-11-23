@@ -1,7 +1,7 @@
 # Business Model & Monetization Strategy
 
 ## Overview
-CodeVis is designed as a **freemium SaaS product** with multiple revenue streams targeting both B2C (students, individual developers) and B2B (educational institutions, bootcamps, enterprises).
+CodeAtlas is designed as a **freemium SaaS product** with multiple revenue streams targeting both B2C (students, individual developers) and B2B (educational institutions, bootcamps, enterprises).
 
 ---
 
@@ -145,7 +145,7 @@ CodeVis is designed as a **freemium SaaS product** with multiple revenue streams
 
 **Requirements**:
 - Minimum 10K subscribers/followers
-- Create at least 2 videos/posts about CodeVis
+- Create at least 2 videos/posts about CodeAtlas
 
 ---
 
@@ -386,7 +386,7 @@ If building to sell (3-5 years):
 "70% of CS students struggle to understand DSA because it's abstract and boring."
 
 ### Slide 2: Solution
-"CodeVis makes DSA tangible through interactive 3D visualizations + code execution."
+"CodeAtlas makes DSA tangible through interactive 3D visualizations + code execution."
 
 ### Slide 3: Demo
 [Video of stack visualization + code execution]
@@ -426,7 +426,7 @@ Subject: Partnership Opportunity - Interactive DSA Visualization Platform
 
 Hi [Name],
 
-I'm building CodeVis, an interactive DSA visualization platform that's helping 
+I'm building CodeAtlas, an interactive DSA visualization platform that's helping 
 thousands of students master algorithms through visual learning.
 
 Our unique features:
