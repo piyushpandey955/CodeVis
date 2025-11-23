@@ -21,7 +21,7 @@ const ControlPanel = ({
       <div className="flex items-center gap-4 pt-4 border-t border-white/10">
         <button
           onClick={isPlaying ? onPause : onPlay}
-          className="p-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg transition-colors duration-200"
+          className="p-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg transition-colors duration-200 cursor-pointer"
           title={isPlaying ? 'Pause' : 'Play'}
         >
           {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
@@ -29,7 +29,7 @@ const ControlPanel = ({
         
         <button
           onClick={onReset}
-          className="p-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors duration-200"
+          className="p-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors duration-200 cursor-pointer"
           title="Reset"
         >
           <RotateCcw className="w-5 h-5" />
