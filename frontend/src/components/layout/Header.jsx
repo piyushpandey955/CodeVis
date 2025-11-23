@@ -24,6 +24,8 @@ const VisualizersDropdown = ({ direction = 'left' }) => {
     { name: 'Stack', path: '/visualizers/stack' },
     { name: 'Queue', path: '/visualizers/queue' },
     { name: 'Linked List', path: '/visualizers/linked-list' },
+    { name: 'Tree', path: '/visualizers/tree' },
+    { name: 'Graph', path: '/visualizers/graph' },
   ];
 
   return (
