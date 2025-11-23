@@ -66,7 +66,7 @@ export default function Hero() {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: '0px 0px 30px rgba(99, 102, 241, 0.5)' }}
               whileTap={{ scale: 0.95 }}
-              className="group px-8 py-4 bg-indigo-500 text-white rounded-full font-bold text-lg shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+              className="group px-8 py-4 bg-indigo-500 text-white rounded-full font-bold text-lg shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
             >
               Start Learning Now
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

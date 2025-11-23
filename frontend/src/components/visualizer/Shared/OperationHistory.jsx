@@ -15,7 +15,7 @@ const OperationHistory = ({ operations = [], onClear }) => {
         {operations.length > 0 && (
           <button
             onClick={onClear}
-            className="p-2 text-red-400 hover:bg-red-500/10 rounded-lg transition-colors duration-200"
+            className="p-2 text-red-400 hover:bg-red-500/10 rounded-lg transition-colors duration-200 cursor-pointer"
             title="Clear History"
           >
             <Trash2 className="w-4 h-4" />
