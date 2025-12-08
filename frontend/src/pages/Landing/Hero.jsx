@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Code, Cpu, Zap } from 'lucide-react';
 import Scene3D from '../../components/three/Scene3D';
 import Typewriter from '../../components/ui/Typewriter';
@@ -16,6 +17,8 @@ const Feature = ({ icon, title, children }) => (
 );
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a001f] px-4">
       {/* 3D Background & Grid */}
@@ -66,9 +69,10 @@ export default function Hero() {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: '0px 0px 30px rgba(99, 102, 241, 0.5)' }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate('/visualizers')}
               className="group px-8 py-4 bg-indigo-500 text-white rounded-full font-bold text-lg shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
             >
-              Start Learning Now
+              Get Started
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </motion.button>
           </motion.div>

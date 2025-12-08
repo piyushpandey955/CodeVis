@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Code2 } from 'lucide-react';
 
-const CodePanel = ({ codeExamples, complexity }) => {
+const CodePanel = ({ examples, codeExamples, complexity }) => {
   const [selectedLanguage, setSelectedLanguage] = useState('python');
   
-  const languages = Object.keys(codeExamples || {});
-  const currentCode = codeExamples?.[selectedLanguage] || '';
+  // Support both 'examples' and 'codeExamples' prop names
+  const codes = examples || codeExamples || {};
+  const languages = Object.keys(codes);
+  const currentCode = codes[selectedLanguage] || '';
 
   return (
     <div className="space-y-4">
