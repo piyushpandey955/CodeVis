@@ -11,7 +11,11 @@ import {
   ArrowRight,
   ArrowUpDown,
   Hash,
-  Database
+  Database,
+  Navigation,
+  Search,
+  HardDrive,
+  Zap
 } from 'lucide-react';
 
 const visualizers = [
@@ -117,6 +121,53 @@ const visualizers = [
   },
 ];
 
+const realWorldUseCases = [
+  {
+    id: 'bfs-routing',
+    name: 'BFS Routing',
+    icon: Navigation,
+    description: 'See how Google Maps finds the shortest route using BFS pathfinding algorithm.',
+    path: '/visualizers/bfs-routing',
+    color: 'from-blue-400 to-purple-500',
+    bgColor: 'bg-blue-500/10',
+    borderColor: 'border-blue-500/20',
+    realWorld: 'Google Maps',
+  },
+  {
+    id: 'trie-autocomplete',
+    name: 'Trie Autocomplete',
+    icon: Search,
+    description: 'Experience how search engines provide instant suggestions using Trie data structures.',
+    path: '/visualizers/trie-autocomplete',
+    color: 'from-purple-400 to-pink-500',
+    bgColor: 'bg-purple-500/10',
+    borderColor: 'border-purple-500/20',
+    realWorld: 'Search Engines',
+  },
+  {
+    id: 'lru-cache',
+    name: 'LRU Cache',
+    icon: HardDrive,
+    description: 'Discover how browsers cache pages for instant loading using LRU eviction.',
+    path: '/visualizers/lru-cache',
+    color: 'from-emerald-400 to-teal-500',
+    bgColor: 'bg-emerald-500/10',
+    borderColor: 'border-emerald-500/20',
+    realWorld: 'Browser Cache',
+  },
+  {
+    id: 'dijkstra',
+    name: "Dijkstra's Algorithm",
+    icon: Zap,
+    description: 'Watch how GPS systems find optimal paths using priority queues and Dijkstra.',
+    path: '/visualizers/dijkstra',
+    color: 'from-orange-400 to-red-500',
+    bgColor: 'bg-orange-500/10',
+    borderColor: 'border-orange-500/20',
+    realWorld: 'GPS Navigation',
+  },
+];
+
 const VisualizerCard = ({ visualizer, index }) => {
   const navigate = useNavigate();
   const Icon = visualizer.icon;
@@ -179,16 +230,54 @@ export default function VisualizersOverview() {
           </p>
         </motion.div>
 
-        {/* Visualizer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {visualizers.map((visualizer, index) => (
-            <VisualizerCard 
-              key={visualizer.id} 
-              visualizer={visualizer} 
-              index={index}
-            />
-          ))}
-        </div>
+        {/* Data Structures Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-white mb-4">Core Data Structures</h2>
+          <p className="text-white/60 mb-8">Master the fundamental building blocks of computer science</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {visualizers.map((visualizer, index) => (
+              <VisualizerCard 
+                key={visualizer.id} 
+                visualizer={visualizer} 
+                index={index}
+              />
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Real-World Use Cases Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mb-16"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Real-World{' '}
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Use Cases
+              </span>
+            </h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              See how these algorithms power the apps you use every day. Connect theory to practice!
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {realWorldUseCases.map((visualizer, index) => (
+              <VisualizerCard 
+                key={visualizer.id} 
+                visualizer={visualizer} 
+                index={index + visualizers.length}
+              />
+            ))}
+          </div>
+        </motion.div>
 
         {/* Footer Info */}
         <motion.div

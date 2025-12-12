@@ -13,6 +13,10 @@ import GraphVisualizer from './pages/Visualizers/GraphVisualizer';
 import PriorityQueueVisualizer from './pages/Visualizers/PriorityQueueVisualizer';
 import HashMapVisualizer from './pages/Visualizers/HashMapVisualizer';
 import HashSetVisualizer from './pages/Visualizers/HashSetVisualizer';
+import BFSRoutingVisualizer from './pages/Visualizers/BFSRoutingVisualizer';
+import TrieAutocompleteVisualizer from './pages/Visualizers/TrieAutocompleteVisualizer';
+import LRUCacheVisualizer from './pages/Visualizers/LRUCacheVisualizer';
+import DijkstraVisualizer from './pages/Visualizers/DijkstraVisualizer';
 import './App.css';
 
 function App() {
@@ -34,6 +38,11 @@ function App() {
           <Route path="/visualizers/priority-queue" element={<PriorityQueueVisualizer />} />
           <Route path="/visualizers/hashmap" element={<HashMapVisualizer />} />
           <Route path="/visualizers/hashset" element={<HashSetVisualizer />} />
+          {/* Real-World Use Cases */}
+          <Route path="/visualizers/bfs-routing" element={<BFSRoutingVisualizer />} />
+          <Route path="/visualizers/trie-autocomplete" element={<TrieAutocompleteVisualizer />} />
+          <Route path="/visualizers/lru-cache" element={<LRUCacheVisualizer />} />
+          <Route path="/visualizers/dijkstra" element={<DijkstraVisualizer />} />
           {/* Add other routes here */}
         </Routes>
       </main>
