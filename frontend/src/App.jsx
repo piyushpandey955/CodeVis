@@ -17,6 +17,7 @@ import BFSRoutingVisualizer from './pages/Visualizers/BFSRoutingVisualizer';
 import TrieAutocompleteVisualizer from './pages/Visualizers/TrieAutocompleteVisualizer';
 import LRUCacheVisualizer from './pages/Visualizers/LRUCacheVisualizer';
 import DijkstraVisualizer from './pages/Visualizers/DijkstraVisualizer';
+import CodeVisualizer from './pages/CodeVisualizer';
 import './App.css';
 
 function App() {
@@ -43,6 +44,8 @@ function App() {
           <Route path="/visualizers/trie-autocomplete" element={<TrieAutocompleteVisualizer />} />
           <Route path="/visualizers/lru-cache" element={<LRUCacheVisualizer />} />
           <Route path="/visualizers/dijkstra" element={<DijkstraVisualizer />} />
+          {/* Sprint 3: Code Visualizer */}
+          <Route path="/code-visualizer" element={<CodeVisualizer />} />
           {/* Add other routes here */}
         </Routes>
       </main>

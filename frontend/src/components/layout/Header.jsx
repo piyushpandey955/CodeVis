@@ -118,7 +118,9 @@ export default function Header() {
               <Link to="/visualizers" className="text-white/80 hover:text-white transition-colors duration-300 cursor-pointer">
                 Visualizers
               </Link>
-              <span className="text-white/50 cursor-not-allowed">Real Time Code Editor</span>
+              <Link to="/code-visualizer" className="text-white/80 hover:text-white transition-colors duration-300 cursor-pointer">
+                Code Visualizer
+              </Link>
               <span className="text-white/50 cursor-not-allowed">AI Code Assist</span>
             </>
           ) : (
@@ -126,6 +128,9 @@ export default function Header() {
             <>
               <Link to="/visualizers" className="text-white/80 hover:text-white transition-colors duration-300 cursor-pointer">
                 Visualizers
+              </Link>
+              <Link to="/code-visualizer" className="text-white/80 hover:text-white transition-colors duration-300 cursor-pointer">
+                Code Visualizer
               </Link>
               <NavLink direction="left" href="#features">Features</NavLink>
               <NavLink direction="right" href="#pricing">Pricing</NavLink>
